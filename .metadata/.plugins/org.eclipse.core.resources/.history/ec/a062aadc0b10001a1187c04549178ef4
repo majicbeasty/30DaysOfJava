@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class MySweetProgram {
+
+	public static void main(String[] args) { //the identifier for this method is main (String[] args is a parameter and return type is void)
+			
+		Scanner in = new Scanner("text.txt");
+		
+		if(in.hasNextLine()){
+			System.out.println(in.nextLine());
+		}
+		in.close();
+	}
+}

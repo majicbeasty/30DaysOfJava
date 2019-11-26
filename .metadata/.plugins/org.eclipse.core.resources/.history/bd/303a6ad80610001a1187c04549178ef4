@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class MySweetProgram {
+
+	public static void main(String[] args) { //the identifier for this method is main (String[] args is a parameter and return type is void)
+			
+		Scanner in = new Scanner(System.in);
+		System.out.println("give us a size!");
+		int size = in.nextInt();
+		
+		
+		int [] grades = new int[size];
+		
+		System.out.println("Enter " + size + " numbers. Press enter after each!");
+		for(int i = 0; i < size; i++) {
+			grades[i] = in.nextInt();
+		}
+		
+		in.close();
+		
+		for(int i = 0; i < size; i++) {
+			System.out.println(grades[i]);
+		}
+	}
+}
