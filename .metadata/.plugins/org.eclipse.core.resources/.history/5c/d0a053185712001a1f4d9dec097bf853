@@ -1,0 +1,30 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+public class Palindrome {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		// TODO Auto-generated method stub
+		String fileName = "palindrome.txt";
+		Scanner in = new Scanner(System.in);
+		
+		try {
+			PrintWriter outputStream = new PrintWriter(fileName);
+			for(int row = 0; row < 64; row++){
+				System.out.println("Enter a word!");
+				String word = in.nextLine();
+				outputStream.println(word);
+			}
+			outputStream.close();
+		} catch (FileNotFoundException e){
+			e.printStackTrace();
+		}
+		in.close();
+	}	
+
+}
